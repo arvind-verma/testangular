@@ -28,11 +28,18 @@ export class LoginComponent implements OnInit {
     }
 
     editAction ="-1";
-    edit(id){
+    editTest(id){
       this.editAction = id;
       if(typeof this.grid_row[id]!="undefined"){
         this.full_name_test = this.grid_row[id].name;
         this.email_test = this.grid_row[id].email;
+      }
+    }
+
+    updateTest(){
+      if(typeof this.grid_row[this.editAction]!="undefined"){
+        this.grid_row[this.editAction].name =  this.full_name_test;
+        this.grid_row[this.editAction].email = this.email_test ;
       }
     }
 }
