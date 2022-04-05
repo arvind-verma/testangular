@@ -1,0 +1,17 @@
+
+
+
+
+
+<div class="row">
+    <input type="text" class="form-control" [(ngModel)]="full_name_test">
+</div>
+<div class="row">
+    <input type="email" class="form-control" [(ngModel)]="email_test">
+</div>
+<div class="row">
+   <button *ngIf="editAction==-1" type="button" (click)="saveData()">Submit</button>
+   <button *ngIf="editAction!=-1" type="button" (click)="updateData()">Update</button>
+</div>
+
+       
